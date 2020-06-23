@@ -1,2 +1,1 @@
 ErrorDocument 404 http://190.153.178.171/nbl/404.html
-LogLevel "Trace8"
