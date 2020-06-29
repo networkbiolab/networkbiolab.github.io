@@ -7,7 +7,7 @@ Order allow,deny
 Deny from all
 </Files>
 
-# Disable directory browsing 
+# Disable directory browsing
 Options -Indexes
 
 # Hide the contents of directories
@@ -17,7 +17,7 @@ IndexIgnore *
 IndexIgnore *.png *.zip *.jpg *.gif *.doc *.sh *.php
 
 # Deny access to files with extensions
-<FilesMatch "\.(ini|psd|log|sh|php)$">
+<FilesMatch "\.(ini|psd|log|sh|php|css)$">
 Order allow,deny
 Deny from all
 </FilesMatch>
