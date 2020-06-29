@@ -1,1 +1,29 @@
+# error 404
 ErrorDocument 404 http://190.153.178.171/nbl/404.html
+
+# Deny access to .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# Disable directory browsing 
+Options -Indexes
+
+# Hide the contents of directories
+IndexIgnore *
+
+# Hide files from listing
+IndexIgnore *.png *.zip *.jpg *.gif *.doc *.sh *.php
+
+# Deny access to files with extensions
+<FilesMatch "\.(ini|psd|log|sh|php)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
+
+# Deny access to filenames starting with dot(.)
+<FilesMatch "^\.">
+Order allow,deny
+Deny from all
+</FilesMatch>
